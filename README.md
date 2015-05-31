@@ -1,2 +1,2 @@
-# micmind-air
+# Micmind
 Remotely controlled microphone stand prototype
