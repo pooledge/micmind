@@ -1,2 +1,2 @@
-# Micmind
-Remotely controlled microphone stand prototype
+# micmind
+Remotely controlled microphone stand prototype.
