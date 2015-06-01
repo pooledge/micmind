@@ -7681,8 +7681,8 @@ Created 2014-06-16, Karrer Zheng&lt;br&gt;
 <part name="C4" library="rcl" deviceset="C-EU" device="025-025X050" value="0.1µF"/>
 <part name="C1" library="rcl" deviceset="C-EU" device="025-025X050" value="0.1µF"/>
 <part name="C2" library="rcl" deviceset="C-EU" device="025-025X050" value="0.1µF"/>
-<part name="CE1" library="Eagle_Wurth_Elektronik_Passive_Capacitors_rev15a" deviceset="WCAP-PTG5" device="_8X8X3.5X0.6(DXLXPXØ)" value="100uF"/>
-<part name="CE2" library="Eagle_Wurth_Elektronik_Passive_Capacitors_rev15a" deviceset="WCAP-PTG5" device="_8X8X3.5X0.6(DXLXPXØ)" value="100uF"/>
+<part name="CE1" library="Eagle_Wurth_Elektronik_Passive_Capacitors_rev15a" deviceset="WCAP-PTG5" device="_8X8X3.5X0.6(DXLXPXØ)" value="100µF"/>
+<part name="CE2" library="Eagle_Wurth_Elektronik_Passive_Capacitors_rev15a" deviceset="WCAP-PTG5" device="_8X8X3.5X0.6(DXLXPXØ)" value="100µF"/>
 <part name="C5" library="rcl" deviceset="C-EU" device="025-025X050" value="0.1µF"/>
 <part name="L293D2/1" library="Wurth_Elektronik_Electromechanic_Board_to_Board_Connectors_rev15b" deviceset="61300811821" device=""/>
 <part name="L293D2/2" library="Wurth_Elektronik_Electromechanic_Board_to_Board_Connectors_rev15b" deviceset="61300811821" device=""/>
@@ -7692,8 +7692,8 @@ Created 2014-06-16, Karrer Zheng&lt;br&gt;
 <part name="C9" library="rcl" deviceset="C-EU" device="025-025X050" value="0.1µF"/>
 <part name="C6" library="rcl" deviceset="C-EU" device="025-025X050" value="0.1µF"/>
 <part name="C7" library="rcl" deviceset="C-EU" device="025-025X050" value="0.1µF"/>
-<part name="CE3" library="Eagle_Wurth_Elektronik_Passive_Capacitors_rev15a" deviceset="WCAP-PTG5" device="_8X8X3.5X0.6(DXLXPXØ)" value="100uF"/>
-<part name="CE4" library="Eagle_Wurth_Elektronik_Passive_Capacitors_rev15a" deviceset="WCAP-PTG5" device="_8X8X3.5X0.6(DXLXPXØ)" value="100uF"/>
+<part name="CE3" library="Eagle_Wurth_Elektronik_Passive_Capacitors_rev15a" deviceset="WCAP-PTG5" device="_8X8X3.5X0.6(DXLXPXØ)" value="100µF"/>
+<part name="CE4" library="Eagle_Wurth_Elektronik_Passive_Capacitors_rev15a" deviceset="WCAP-PTG5" device="_8X8X3.5X0.6(DXLXPXØ)" value="100µF"/>
 <part name="C10" library="rcl" deviceset="C-EU" device="025-025X050" value="0.1µF"/>
 <part name="GND8" library="supply1" deviceset="GND" device=""/>
 <part name="DCDCCONV" library="Wurth_Elektronik_Electromechanic_Board_to_Board_Connectors_rev15b" deviceset="61300311821" device=""/>
