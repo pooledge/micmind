@@ -6,21 +6,21 @@
     <settings>
       <setting command="ID">1A</setting>
       <setting command="RR">A</setting>
-      <setting command="MT">0</setting>
-      <setting command="CE">2</setting>
+      <setting command="MT">3</setting>
+      <setting command="CE">1</setting>
       <setting command="PL">0</setting>
       <setting command="DH">13A200</setting>
       <setting command="DL">40A28E61</setting>
       <setting command="NI">Micmind Air XBSL H</setting>
-      <setting command="NT">20</setting>
-      <setting command="NO">4</setting>
+      <setting command="NT">82</setting>
+      <setting command="NO">0</setting>
       <setting command="DD">60000</setting>
       <setting command="EE">0</setting>
       <setting command="KY"></setting>
       <setting command="BD">5</setting>
       <setting command="NB">0</setting>
       <setting command="SB">0</setting>
-      <setting command="RO">0</setting>
+      <setting command="RO">3</setting>
       <setting command="D7">1</setting>
       <setting command="D6">0</setting>
       <setting command="FT">13F</setting>
@@ -47,7 +47,7 @@
       <setting command="IR">0</setting>
       <setting command="IF">1</setting>
       <setting command="CT">64</setting>
-      <setting command="GT">32</setting>
+      <setting command="GT">3E8</setting>
       <setting command="CC">2B</setting>
       <setting command="WH">0</setting>
       <setting command="SO">0</setting>
