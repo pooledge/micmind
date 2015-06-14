@@ -98,7 +98,7 @@ void loop() {
     LSB = currentCommand[1];
      
     powerValue = int(LSB);
-    powerValueTwoThirds = int(LSB * 2 / 3);
+    powerValueTwoThirds = int(LSB) * 2 / 3;
       
     switch (MSB) {
       case 'c': // Rotate CW
