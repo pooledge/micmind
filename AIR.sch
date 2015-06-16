@@ -7611,44 +7611,157 @@ Eagle Version 6, Library Revision 2015b, 13.02.2015&lt;br&gt;
 &lt;HR&gt;
 Copyright: Würth Elektronik</description>
 <packages>
-<package name="691101710002">
-<description>&lt;b&gt;WR-TBL Serie 101 - 5.0mm HOrizontal Entry Modular with Pressure Clamp - 2.5mm2 Wires , 2 pins</description>
+<package name="691101710003">
+<description>&lt;b&gt;WR-TBL Serie 101 - 5.0mm HOrizontal Entry Modular with Pressure Clamp - 2.5mm2 Wires , 3 pins</description>
 <wire x1="-8.1" y1="5" x2="-8.1" y2="-4" width="0.127" layer="21"/>
-<wire x1="-8.1" y1="-4" x2="3.1" y2="-4" width="0.127" layer="21"/>
-<wire x1="3.1" y1="-4" x2="3.1" y2="5" width="0.127" layer="21"/>
-<wire x1="3.1" y1="5" x2="-8.1" y2="5" width="0.127" layer="21"/>
+<wire x1="-8.1" y1="-4" x2="8.1" y2="-4" width="0.127" layer="21"/>
+<wire x1="8.1" y1="-4" x2="8.1" y2="5" width="0.127" layer="21"/>
+<wire x1="8.1" y1="5" x2="-8.1" y2="5" width="0.127" layer="21"/>
 <pad name="2" x="0" y="0" drill="1.3"/>
 <pad name="1" x="-5" y="0" drill="1.3"/>
+<pad name="3" x="5" y="0" drill="1.3"/>
+<text x="-11.392" y="6.5269" size="1.27" layer="25">&gt;NAME</text>
+<text x="-11.392" y="-8.305" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="691221320008">
+<description>&lt;b&gt;WR-TBL Serie 2213 - 3.81mm 45° Entry Modular with Rising Cage Clamp - 1.3mm2 Wires, 8 Pins</description>
+<wire x1="24.765" y1="4.3" x2="-5.715" y2="4.3" width="0.127" layer="21"/>
+<wire x1="-5.715" y1="4.3" x2="-5.715" y2="-5.7" width="0.127" layer="21"/>
+<wire x1="-5.715" y1="-5.7" x2="24.765" y2="-5.7" width="0.127" layer="21"/>
+<wire x1="24.765" y1="-5.7" x2="24.765" y2="4.3" width="0.127" layer="21"/>
+<pad name="2" x="0" y="0" drill="1.2"/>
+<pad name="1" x="-3.81" y="0" drill="1.2"/>
+<pad name="3" x="3.81" y="0" drill="1.2"/>
+<pad name="4" x="7.62" y="0" drill="1.2"/>
+<pad name="5" x="11.43" y="0" drill="1.2"/>
+<pad name="6" x="15.24" y="0" drill="1.2"/>
+<pad name="7" x="19.05" y="0" drill="1.2"/>
+<pad name="8" x="22.86" y="0" drill="1.2"/>
+<text x="-10.112" y="6.4245" size="1.27" layer="25">&gt;NAME</text>
+<text x="-10.112" y="-8.2026" size="1.27" layer="27">&gt;VALUE</text>
+</package>
+<package name="691121710004">
+<description>&lt;b&gt;WR-TBL Serie 121 - 5.0mm Horizontal Entry Modular With Pressure Clamp - 3.3mm2 Wires, 4 Pins</description>
+<wire x1="13.3" y1="3.7" x2="-8.3" y2="3.7" width="0.127" layer="21"/>
+<wire x1="-8.3" y1="3.7" x2="-8.3" y2="-4.6" width="0.127" layer="21"/>
+<wire x1="-8.3" y1="-4.6" x2="13.3" y2="-4.6" width="0.127" layer="21"/>
+<wire x1="13.3" y1="-4.6" x2="13.3" y2="3.7" width="0.127" layer="21"/>
+<pad name="3" x="5" y="0" drill="1.5"/>
+<pad name="4" x="10" y="0" drill="1.5"/>
+<pad name="2" x="0" y="0" drill="1.5"/>
+<pad name="1" x="-5" y="0" drill="1.5"/>
 <text x="-11.392" y="6.5269" size="1.27" layer="25">&gt;NAME</text>
 <text x="-11.392" y="-8.305" size="1.27" layer="27">&gt;VALUE</text>
 </package>
 </packages>
 <symbols>
-<symbol name="2">
+<symbol name="3">
+<wire x1="-1.651" y1="3.429" x2="-1.651" y2="1.651" width="0.254" layer="94" curve="180" cap="flat"/>
 <wire x1="-1.651" y1="0.889" x2="-1.651" y2="-0.889" width="0.254" layer="94" curve="180" cap="flat"/>
 <wire x1="-1.651" y1="-1.651" x2="-1.651" y2="-3.429" width="0.254" layer="94" curve="180" cap="flat"/>
 <text x="1.27" y="0.238" size="1.778" layer="95">&gt;NAME</text>
 <text x="1.27" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
-<pin name="1" x="-5.08" y="0" visible="pad" length="short" direction="pas"/>
-<pin name="2" x="-5.08" y="-2.54" visible="pad" length="short" direction="pas"/>
+<pin name="1" x="-5.08" y="2.54" visible="pad" length="short" direction="pas"/>
+<pin name="2" x="-5.08" y="0" visible="pad" length="short" direction="pas"/>
+<pin name="3" x="-5.08" y="-2.54" visible="pad" length="short" direction="pas"/>
+</symbol>
+<symbol name="8">
+<wire x1="-1.651" y1="11.049" x2="-1.651" y2="9.271" width="0.254" layer="94" curve="180" cap="flat"/>
+<wire x1="-1.651" y1="8.509" x2="-1.651" y2="6.731" width="0.254" layer="94" curve="180" cap="flat"/>
+<wire x1="-1.651" y1="5.969" x2="-1.651" y2="4.191" width="0.254" layer="94" curve="180" cap="flat"/>
+<wire x1="-1.651" y1="3.429" x2="-1.651" y2="1.651" width="0.254" layer="94" curve="180" cap="flat"/>
+<wire x1="-1.651" y1="0.889" x2="-1.651" y2="-0.889" width="0.254" layer="94" curve="180" cap="flat"/>
+<wire x1="-1.651" y1="-1.651" x2="-1.651" y2="-3.429" width="0.254" layer="94" curve="180" cap="flat"/>
+<wire x1="-1.651" y1="-4.191" x2="-1.651" y2="-5.969" width="0.254" layer="94" curve="180" cap="flat"/>
+<wire x1="-1.651" y1="-6.731" x2="-1.651" y2="-8.509" width="0.254" layer="94" curve="180" cap="flat"/>
+<text x="1.27" y="0.238" size="1.778" layer="95">&gt;NAME</text>
+<text x="1.27" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="1" x="-5.08" y="10.16" visible="pad" length="short" direction="pas"/>
+<pin name="2" x="-5.08" y="7.62" visible="pad" length="short" direction="pas"/>
+<pin name="3" x="-5.08" y="5.08" visible="pad" length="short" direction="pas"/>
+<pin name="4" x="-5.08" y="2.54" visible="pad" length="short" direction="pas"/>
+<pin name="5" x="-5.08" y="0" visible="pad" length="short" direction="pas"/>
+<pin name="6" x="-5.08" y="-2.54" visible="pad" length="short" direction="pas"/>
+<pin name="7" x="-5.08" y="-5.08" visible="pad" length="short" direction="pas"/>
+<pin name="8" x="-5.08" y="-7.62" visible="pad" length="short" direction="pas"/>
+</symbol>
+<symbol name="4">
+<wire x1="-1.651" y1="5.969" x2="-1.651" y2="4.191" width="0.254" layer="94" curve="180" cap="flat"/>
+<wire x1="-1.651" y1="3.429" x2="-1.651" y2="1.651" width="0.254" layer="94" curve="180" cap="flat"/>
+<wire x1="-1.651" y1="0.889" x2="-1.651" y2="-0.889" width="0.254" layer="94" curve="180" cap="flat"/>
+<wire x1="-1.651" y1="-1.651" x2="-1.651" y2="-3.429" width="0.254" layer="94" curve="180" cap="flat"/>
+<text x="1.27" y="0.238" size="1.778" layer="95">&gt;NAME</text>
+<text x="1.27" y="-2.54" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="1" x="-5.08" y="5.08" visible="pad" length="short" direction="pas"/>
+<pin name="2" x="-5.08" y="2.54" visible="pad" length="short" direction="pas"/>
+<pin name="3" x="-5.08" y="0" visible="pad" length="short" direction="pas"/>
+<pin name="4" x="-5.08" y="-2.54" visible="pad" length="short" direction="pas"/>
 </symbol>
 </symbols>
 <devicesets>
-<deviceset name="691101710002" prefix="K">
-<description>&lt;b&gt;WR-TBL Serie 101 - 5.0mm HOrizontal Entry Modular with Pressure Clamp - 2.5mm2 Wires , 2 pins&lt;/b&gt;=&gt;Code : Con-TBL_Screw_PressureClamp_691101710002
+<deviceset name="691101710003" prefix="K">
+<description>&lt;b&gt;WR-TBL Serie 101 - 5.0mm HOrizontal Entry Modular with Pressure Clamp - 2.5mm2 Wires , 3 pins&lt;/b&gt;=&gt;Code : Con-TBL_Screw_PressureClamp_691101710003
 &lt;br&gt;&lt;a href="http://katalog.we-online.de/media/images/eican/Con-TBL_Screw_PressureClamp_6911017100xx_pf2.jpg" title="Enlarge picture"&gt;
 &lt;img src="http://katalog.we-online.de/media/thumbs2/eican/thb_Con-TBL_Screw_PressureClamp_6911017100xx_pf2.jpg" width="320"&gt;&lt;/a&gt;&lt;p&gt;
 Details see: &lt;a href="http://katalog.we-online.de/en/em/691_101_710_0xx"&gt;http://katalog.we-online.de/en/em/691_101_710_0xx&lt;/a&gt;&lt;p&gt;
-Created 2014-06-16, Karrer Zheng&lt;br&gt;
+Created 2014-06-17, Karrer Zheng&lt;br&gt;
 2014 (C) Würth Elektronik</description>
 <gates>
-<gate name="G$1" symbol="2" x="0" y="0"/>
+<gate name="G$1" symbol="3" x="0" y="0"/>
 </gates>
 <devices>
-<device name="" package="691101710002">
+<device name="" package="691101710003">
 <connects>
 <connect gate="G$1" pin="1" pad="1"/>
 <connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="691221320008" prefix="K">
+<description>&lt;b&gt;WR-TBL Serie 2213 - 3.81mm 45° Entry Modular with Rising Cage Clamp - 1.3mm2 Wires, 8 Pins&lt;/b&gt;=&gt;Code : Con_TBL_Screw_RisingClamp_3.81_691221320008
+&lt;br&gt;&lt;a href="http://katalog.we-online.de/media/images/eican/Con_TBL_Screw_RisingClamp_3.81_6912213200xx_pf2.jpg" title="Enlarge picture"&gt;
+&lt;img src="http://katalog.we-online.de/media/thumbs2/eican/thb_Con_TBL_Screw_RisingClamp_3.81_6912213200xx_pf2.jpg" width="320"&gt;&lt;/a&gt;&lt;p&gt;
+Details see: &lt;a href="http://katalog.we-online.de/en/em/691_221_320_0xx"&gt;http://katalog.we-online.de/en/em/691_221_320_0xx&lt;/a&gt;&lt;p&gt;
+Created 2014-06-18, Karrer Zheng&lt;br&gt;
+2014 (C) Würth Elektronik</description>
+<gates>
+<gate name="G$1" symbol="8" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="691221320008">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
+<connect gate="G$1" pin="5" pad="5"/>
+<connect gate="G$1" pin="6" pad="6"/>
+<connect gate="G$1" pin="7" pad="7"/>
+<connect gate="G$1" pin="8" pad="8"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="691121710004" prefix="K">
+<description>&lt;b&gt;WR-TBL Serie 121 - 5.0mm Horizontal Entry Modular With Pressure Clamp - 3.3mm2 Wires, 4 Pins</description>
+<gates>
+<gate name="G$1" symbol="4" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="691121710004">
+<connects>
+<connect gate="G$1" pin="1" pad="1"/>
+<connect gate="G$1" pin="2" pad="2"/>
+<connect gate="G$1" pin="3" pad="3"/>
+<connect gate="G$1" pin="4" pad="4"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -7703,13 +7816,10 @@ Created 2014-06-16, Karrer Zheng&lt;br&gt;
 <part name="XB/LEDASC" library="Wurth_Elektronik_Electromechanic_Board_to_Board_Connectors_rev15b" deviceset="61300211821" device=""/>
 <part name="R1" library="resistor" deviceset="R-EU_" device="0204/7" value="150R"/>
 <part name="XB/LEDRSSI" library="Wurth_Elektronik_Electromechanic_Board_to_Board_Connectors_rev15b" deviceset="61300211821" device=""/>
-<part name="MAINS/BATT" library="Wurth_Elektronik_Electromechanic_Terminal_Blocks_Connectors_rev15b" deviceset="691101710002" device=""/>
-<part name="MOT/L" library="Wurth_Elektronik_Electromechanic_Terminal_Blocks_Connectors_rev15b" deviceset="691101710002" device=""/>
-<part name="MOT/C" library="Wurth_Elektronik_Electromechanic_Terminal_Blocks_Connectors_rev15b" deviceset="691101710002" device=""/>
-<part name="MOT/R" library="Wurth_Elektronik_Electromechanic_Terminal_Blocks_Connectors_rev15b" deviceset="691101710002" device=""/>
-<part name="MOT/B" library="Wurth_Elektronik_Electromechanic_Terminal_Blocks_Connectors_rev15b" deviceset="691101710002" device=""/>
-<part name="MAINS/SW" library="Wurth_Elektronik_Electromechanic_Terminal_Blocks_Connectors_rev15b" deviceset="691101710002" device=""/>
+<part name="MOTORS/BLCR" library="Wurth_Elektronik_Electromechanic_Terminal_Blocks_Connectors_rev15b" deviceset="691221320008" device=""/>
+<part name="MAINS/SW" library="Wurth_Elektronik_Electromechanic_Terminal_Blocks_Connectors_rev15b" deviceset="691101710003" device=""/>
 <part name="LED" library="Wurth_Elektronik_Electromechanic_Board_to_Board_Connectors_rev15b" deviceset="61300511821" device=""/>
+<part name="BATT/CHRG" library="Wurth_Elektronik_Electromechanic_Terminal_Blocks_Connectors_rev15b" deviceset="691121710004" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -7741,20 +7851,17 @@ Created 2014-06-16, Karrer Zheng&lt;br&gt;
 <instance part="CE4" gate="G$1" x="99.06" y="78.74" rot="R90"/>
 <instance part="C10" gate="G$1" x="96.52" y="71.12" rot="R90"/>
 <instance part="GND8" gate="1" x="71.12" y="137.16"/>
-<instance part="DCDCCONV" gate="G$1" x="71.12" y="154.94" rot="R90"/>
+<instance part="DCDCCONV" gate="G$1" x="71.12" y="157.48" rot="R90"/>
 <instance part="ABPROMINI/2" gate="G$1" x="203.2" y="149.86" rot="R180"/>
 <instance part="ABPROMINI/1" gate="G$1" x="157.48" y="152.4"/>
 <instance part="XB/MAINSOC" gate="G$1" x="213.36" y="63.5"/>
 <instance part="XB/LEDASC" gate="G$1" x="185.42" y="91.44" rot="MR0"/>
 <instance part="R1" gate="G$1" x="144.78" y="71.12"/>
 <instance part="XB/LEDRSSI" gate="G$1" x="185.42" y="104.14" rot="MR0"/>
-<instance part="MAINS/BATT" gate="G$1" x="27.94" y="149.86" rot="MR0"/>
-<instance part="MOT/L" gate="G$1" x="48.26" y="27.94"/>
-<instance part="MOT/C" gate="G$1" x="48.26" y="22.86"/>
-<instance part="MOT/R" gate="G$1" x="48.26" y="17.78"/>
-<instance part="MOT/B" gate="G$1" x="106.68" y="17.78"/>
-<instance part="MAINS/SW" gate="G$1" x="38.1" y="154.94" rot="R90"/>
+<instance part="MOTORS/BLCR" gate="G$1" x="53.34" y="22.86"/>
+<instance part="MAINS/SW" gate="G$1" x="38.1" y="157.48" rot="R180"/>
 <instance part="LED" gate="G$1" x="162.56" y="66.04"/>
+<instance part="BATT/CHRG" gate="G$1" x="38.1" y="170.18" rot="R180"/>
 </instances>
 <busses>
 </busses>
@@ -7858,11 +7965,17 @@ Created 2014-06-16, Karrer Zheng&lt;br&gt;
 <segment>
 <pinref part="GND8" gate="1" pin="GND"/>
 <pinref part="DCDCCONV" gate="G$1" pin="2"/>
-<wire x1="71.12" y1="149.86" x2="71.12" y2="147.32" width="0.1524" layer="91"/>
-<pinref part="MAINS/BATT" gate="G$1" pin="2"/>
-<wire x1="71.12" y1="147.32" x2="71.12" y2="139.7" width="0.1524" layer="91"/>
-<wire x1="33.02" y1="147.32" x2="71.12" y2="147.32" width="0.1524" layer="91"/>
-<junction x="71.12" y="147.32"/>
+<wire x1="71.12" y1="152.4" x2="71.12" y2="142.24" width="0.1524" layer="91"/>
+<pinref part="BATT/CHRG" gate="G$1" pin="2"/>
+<wire x1="71.12" y1="142.24" x2="71.12" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="43.18" y1="167.64" x2="55.88" y2="167.64" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="167.64" x2="55.88" y2="142.24" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="142.24" x2="71.12" y2="142.24" width="0.1524" layer="91"/>
+<junction x="71.12" y="142.24"/>
+<pinref part="BATT/CHRG" gate="G$1" pin="3"/>
+<wire x1="43.18" y1="170.18" x2="55.88" y2="170.18" width="0.1524" layer="91"/>
+<wire x1="55.88" y1="170.18" x2="55.88" y2="167.64" width="0.1524" layer="91"/>
+<junction x="55.88" y="167.64"/>
 </segment>
 <segment>
 <pinref part="XB/MAINSOC" gate="G$1" pin="4"/>
@@ -7902,11 +8015,6 @@ Created 2014-06-16, Karrer Zheng&lt;br&gt;
 </net>
 <net name="MR-" class="0">
 <segment>
-<wire x1="43.18" y1="15.24" x2="40.64" y2="15.24" width="0.1524" layer="91"/>
-<label x="40.64" y="15.24" size="1.778" layer="95" rot="R180"/>
-<pinref part="MOT/R" gate="G$1" pin="2"/>
-</segment>
-<segment>
 <pinref part="L293D2/2" gate="G$1" pin="6"/>
 <wire x1="83.82" y1="66.04" x2="91.44" y2="66.04" width="0.1524" layer="91"/>
 <wire x1="91.44" y1="68.58" x2="91.44" y2="66.04" width="0.1524" layer="91"/>
@@ -7915,13 +8023,13 @@ Created 2014-06-16, Karrer Zheng&lt;br&gt;
 <wire x1="91.44" y1="66.04" x2="93.98" y2="66.04" width="0.1524" layer="91"/>
 <junction x="91.44" y="66.04"/>
 </segment>
+<segment>
+<pinref part="MOTORS/BLCR" gate="G$1" pin="8"/>
+<wire x1="48.26" y1="15.24" x2="45.72" y2="15.24" width="0.1524" layer="91"/>
+<label x="43.18" y="15.24" size="1.778" layer="95"/>
+</segment>
 </net>
 <net name="MR+" class="0">
-<segment>
-<wire x1="43.18" y1="17.78" x2="40.64" y2="17.78" width="0.1524" layer="91"/>
-<label x="40.64" y="17.78" size="1.778" layer="95" rot="R180"/>
-<pinref part="MOT/R" gate="G$1" pin="1"/>
-</segment>
 <segment>
 <pinref part="L293D2/2" gate="G$1" pin="3"/>
 <wire x1="83.82" y1="58.42" x2="91.44" y2="58.42" width="0.1524" layer="91"/>
@@ -7930,6 +8038,11 @@ Created 2014-06-16, Karrer Zheng&lt;br&gt;
 <pinref part="C8" gate="G$1" pin="1"/>
 <wire x1="91.44" y1="58.42" x2="93.98" y2="58.42" width="0.1524" layer="91"/>
 <junction x="91.44" y="58.42"/>
+</segment>
+<segment>
+<pinref part="MOTORS/BLCR" gate="G$1" pin="7"/>
+<wire x1="48.26" y1="17.78" x2="45.72" y2="17.78" width="0.1524" layer="91"/>
+<label x="43.18" y="17.78" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ML-" class="0">
@@ -7943,9 +8056,9 @@ Created 2014-06-16, Karrer Zheng&lt;br&gt;
 <junction x="35.56" y="58.42"/>
 </segment>
 <segment>
-<wire x1="43.18" y1="25.4" x2="40.64" y2="25.4" width="0.1524" layer="91"/>
-<label x="40.64" y="25.4" size="1.778" layer="95" rot="R180"/>
-<pinref part="MOT/L" gate="G$1" pin="2"/>
+<pinref part="MOTORS/BLCR" gate="G$1" pin="4"/>
+<wire x1="48.26" y1="25.4" x2="45.72" y2="25.4" width="0.1524" layer="91"/>
+<label x="43.18" y="25.4" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="ML+" class="0">
@@ -7959,9 +8072,9 @@ Created 2014-06-16, Karrer Zheng&lt;br&gt;
 <junction x="35.56" y="66.04"/>
 </segment>
 <segment>
-<wire x1="43.18" y1="27.94" x2="40.64" y2="27.94" width="0.1524" layer="91"/>
-<label x="40.64" y="27.94" size="1.778" layer="95" rot="R180"/>
-<pinref part="MOT/L" gate="G$1" pin="1"/>
+<pinref part="MOTORS/BLCR" gate="G$1" pin="3"/>
+<wire x1="48.26" y1="27.94" x2="45.72" y2="27.94" width="0.1524" layer="91"/>
+<label x="43.18" y="27.94" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MC-" class="0">
@@ -7975,9 +8088,9 @@ Created 2014-06-16, Karrer Zheng&lt;br&gt;
 <junction x="91.44" y="109.22"/>
 </segment>
 <segment>
-<wire x1="43.18" y1="20.32" x2="40.64" y2="20.32" width="0.1524" layer="91"/>
-<label x="40.64" y="20.32" size="1.778" layer="95" rot="R180"/>
-<pinref part="MOT/C" gate="G$1" pin="2"/>
+<pinref part="MOTORS/BLCR" gate="G$1" pin="6"/>
+<wire x1="48.26" y1="20.32" x2="45.72" y2="20.32" width="0.1524" layer="91"/>
+<label x="43.18" y="20.32" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MC+" class="0">
@@ -7991,9 +8104,9 @@ Created 2014-06-16, Karrer Zheng&lt;br&gt;
 <junction x="91.44" y="101.6"/>
 </segment>
 <segment>
-<wire x1="43.18" y1="22.86" x2="40.64" y2="22.86" width="0.1524" layer="91"/>
-<label x="40.64" y="22.86" size="1.778" layer="95" rot="R180"/>
-<pinref part="MOT/C" gate="G$1" pin="1"/>
+<pinref part="MOTORS/BLCR" gate="G$1" pin="5"/>
+<wire x1="48.26" y1="22.86" x2="45.72" y2="22.86" width="0.1524" layer="91"/>
+<label x="43.18" y="22.86" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MB-" class="0">
@@ -8007,9 +8120,9 @@ Created 2014-06-16, Karrer Zheng&lt;br&gt;
 <junction x="35.56" y="101.6"/>
 </segment>
 <segment>
-<label x="99.06" y="15.24" size="1.778" layer="95" rot="R180"/>
-<pinref part="MOT/B" gate="G$1" pin="2"/>
-<wire x1="96.52" y1="15.24" x2="101.6" y2="15.24" width="0.1524" layer="91"/>
+<pinref part="MOTORS/BLCR" gate="G$1" pin="2"/>
+<wire x1="48.26" y1="30.48" x2="45.72" y2="30.48" width="0.1524" layer="91"/>
+<label x="43.18" y="30.48" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="MB+" class="0">
@@ -8023,9 +8136,9 @@ Created 2014-06-16, Karrer Zheng&lt;br&gt;
 <junction x="35.56" y="109.22"/>
 </segment>
 <segment>
-<wire x1="96.52" y1="17.78" x2="101.6" y2="17.78" width="0.1524" layer="91"/>
-<label x="99.06" y="17.78" size="1.778" layer="95" rot="R180"/>
-<pinref part="MOT/B" gate="G$1" pin="1"/>
+<pinref part="MOTORS/BLCR" gate="G$1" pin="1"/>
+<wire x1="48.26" y1="33.02" x2="45.72" y2="33.02" width="0.1524" layer="91"/>
+<label x="43.18" y="33.02" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="D7" class="0">
@@ -8078,15 +8191,6 @@ Created 2014-06-16, Karrer Zheng&lt;br&gt;
 </net>
 <net name="+24V" class="0">
 <segment>
-<label x="53.34" y="154.94" size="1.778" layer="95"/>
-<pinref part="DCDCCONV" gate="G$1" pin="1"/>
-<wire x1="40.64" y1="149.86" x2="55.88" y2="149.86" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="149.86" x2="68.58" y2="149.86" width="0.1524" layer="91"/>
-<wire x1="55.88" y1="152.4" x2="55.88" y2="149.86" width="0.1524" layer="91"/>
-<junction x="55.88" y="149.86"/>
-<pinref part="MAINS/SW" gate="G$1" pin="2"/>
-</segment>
-<segment>
 <pinref part="L293D1/1" gate="G$1" pin="8"/>
 <wire x1="40.64" y1="96.52" x2="33.02" y2="96.52" width="0.1524" layer="91"/>
 <wire x1="40.64" y1="93.98" x2="40.64" y2="96.52" width="0.1524" layer="91"/>
@@ -8103,6 +8207,16 @@ Created 2014-06-16, Karrer Zheng&lt;br&gt;
 <label x="35.56" y="50.8" size="1.778" layer="95"/>
 <pinref part="CE3" gate="G$1" pin="1"/>
 <wire x1="33.02" y1="53.34" x2="33.02" y2="50.8" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="DCDCCONV" gate="G$1" pin="1"/>
+<wire x1="68.58" y1="152.4" x2="68.58" y2="149.86" width="0.1524" layer="91"/>
+<label x="60.96" y="149.86" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="MAINS/SW" gate="G$1" pin="1"/>
+<wire x1="43.18" y1="154.94" x2="45.72" y2="154.94" width="0.1524" layer="91"/>
+<label x="43.18" y="152.4" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -8133,11 +8247,6 @@ Created 2014-06-16, Karrer Zheng&lt;br&gt;
 <junction x="91.44" y="71.12"/>
 </segment>
 <segment>
-<pinref part="DCDCCONV" gate="G$1" pin="3"/>
-<wire x1="73.66" y1="149.86" x2="76.2" y2="149.86" width="0.1524" layer="91"/>
-<label x="78.74" y="149.86" size="1.778" layer="95"/>
-</segment>
-<segment>
 <pinref part="ABPROMINI/2" gate="G$1" pin="9"/>
 <wire x1="208.28" y1="157.48" x2="210.82" y2="157.48" width="0.1524" layer="91"/>
 <label x="210.82" y="157.48" size="1.778" layer="95"/>
@@ -8146,6 +8255,11 @@ Created 2014-06-16, Karrer Zheng&lt;br&gt;
 <pinref part="XB/MAINSOC" gate="G$1" pin="6"/>
 <wire x1="208.28" y1="60.96" x2="205.74" y2="60.96" width="0.1524" layer="91"/>
 <label x="203.2" y="60.96" size="1.778" layer="95"/>
+</segment>
+<segment>
+<pinref part="DCDCCONV" gate="G$1" pin="3"/>
+<wire x1="73.66" y1="152.4" x2="73.66" y2="149.86" width="0.1524" layer="91"/>
+<label x="76.2" y="149.86" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="A0" class="0">
@@ -8269,13 +8383,6 @@ Created 2014-06-16, Karrer Zheng&lt;br&gt;
 <label x="35.56" y="111.76" size="1.778" layer="95"/>
 </segment>
 </net>
-<net name="N$3" class="0">
-<segment>
-<wire x1="33.02" y1="149.86" x2="38.1" y2="149.86" width="0.1524" layer="91"/>
-<pinref part="MAINS/BATT" gate="G$1" pin="1"/>
-<pinref part="MAINS/SW" gate="G$1" pin="1"/>
-</segment>
-</net>
 <net name="CTS" class="0">
 <segment>
 <pinref part="XB/MAINSOC" gate="G$1" pin="5"/>
@@ -8347,9 +8454,33 @@ Created 2014-06-16, Karrer Zheng&lt;br&gt;
 <pinref part="LED" gate="G$1" pin="1"/>
 </segment>
 </net>
+<net name="N$3" class="0">
+<segment>
+<pinref part="BATT/CHRG" gate="G$1" pin="1"/>
+<wire x1="43.18" y1="165.1" x2="48.26" y2="165.1" width="0.1524" layer="91"/>
+<wire x1="48.26" y1="165.1" x2="48.26" y2="157.48" width="0.1524" layer="91"/>
+<pinref part="MAINS/SW" gate="G$1" pin="2"/>
+<wire x1="48.26" y1="157.48" x2="43.18" y2="157.48" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="N$4" class="0">
+<segment>
+<pinref part="BATT/CHRG" gate="G$1" pin="4"/>
+<wire x1="43.18" y1="172.72" x2="45.72" y2="172.72" width="0.1524" layer="91"/>
+<wire x1="45.72" y1="172.72" x2="45.72" y2="160.02" width="0.1524" layer="91"/>
+<pinref part="MAINS/SW" gate="G$1" pin="3"/>
+<wire x1="45.72" y1="160.02" x2="43.18" y2="160.02" width="0.1524" layer="91"/>
+</segment>
+</net>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="106,1,152.4,162.56,ARX,,,,,"/>
+<approved hash="106,1,152.4,165.1,ATX,,,,,"/>
+<approved hash="106,1,208.28,63.5,CTS,,,,,"/>
+<approved hash="106,1,208.28,53.34,RTS,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>

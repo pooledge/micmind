@@ -98,7 +98,7 @@ void loop() {
     LSB = currentCommand[1];
      
     powerValue = int(LSB);
-    powerValueTwoThirds = int(LSB) * 2 / 3;
+    powerValueTwoThirds = int(LSB) * 3 / 4;
       
     switch (MSB) {
       case 'c': // Rotate CW
@@ -113,23 +113,23 @@ void loop() {
         break;
      case 'f': // Go forwards
         brake(motorCenter);
-        roam(motorLeft, true, powerValue);
-        roam(motorRight, false, powerValue);
+        roam(motorLeft, false, powerValue);
+        roam(motorRight, true, powerValue);
         break;
      case 'b': // Go backwards
         brake(motorCenter);
-        roam(motorLeft, false, powerValue);
-        roam(motorRight, true, powerValue);
-        break;
-     case 'l': // Go left
-        roam(motorCenter, true, powerValueTwoThirds);
-        roam(motorLeft, false, powerValue);
-        roam(motorRight, true, powerValue);
-        break;
-     case 'r': // Go right
-        roam(motorCenter, false, powerValueTwoThirds);
         roam(motorLeft, true, powerValue);
         roam(motorRight, false, powerValue);
+        break;
+     case 'l': // Go left
+        roam(motorCenter, false, powerValue);
+        roam(motorLeft, true, int(powerValue / 1.5));
+        roam(motorRight, false, int(powerValue / 2.8));
+        break;
+     case 'r': // Go right
+        roam(motorCenter, true, powerValue);
+        roam(motorLeft, false, int(powerValue / 1.5));
+        roam(motorRight, true, int(powerValue / 2.8));
         break;
      case 'w': // Increase base
         roam(motorBase, true, powerValue);
@@ -144,11 +144,11 @@ void loop() {
     }
     
     lastCommandTime = currentTime;
-    
     Serial.print(powerValue);
     Serial.print(" ");
-    Serial.println(powerValueTwoThirds);
-  
+    Serial.print(int(powerValue / 2.2));
+    Serial.print(" ");
+    Serial.println(int(powerValue / 1.5));
     return;
   }
  

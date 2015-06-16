@@ -8,17 +8,20 @@
     <frame name="TX">
       <payload>7E001310010013A20040A28E61FFFE010048656C6C6F76</payload>
     </frame>
-    <frame name="DC">
-      <payload>7E000F17010013A20040A28E61FFFE024443DB</payload>
-    </frame>
-    <frame name="DC - remote">
+    <frame name="DC - LAT">
       <payload>7E0004080144436F</payload>
     </frame>
-    <frame name="FR">
+    <frame name="DC - RAT">
+      <payload>7E000F17010013A20040A28E61FFFE024443DB</payload>
+    </frame>
+    <frame name="FR - LAT">
+      <payload>7E0004080146525E</payload>
+    </frame>
+    <frame name="FR - RAT">
       <payload>7E000F17010013A20040A28E61FFFE024652CA</payload>
     </frame>
-    <frame name="FR - remote">
-      <payload>7E0004080146525E</payload>
+    <frame name="PL - LAT">
+      <payload>7E00040801504C5A</payload>
     </frame>
   </frames_list>
 </data>
