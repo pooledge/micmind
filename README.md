@@ -5,12 +5,12 @@ This repository includes:
 * Arduino sketch to upload on a Pro Mini 328 (5V)
 * MaxMSP patch to build a standalone host app for Mac or Windows
 * EAGLE files containing schematic and board layouts
-* OpenSCAD file enclosure model, to build and export in STL format for futher 3D printing
+* OpenSCAD file enclosure model to build and export in STL format for futher 3D printing
 * Xbee firmware XML files used by XCTU
 * XML file with commands for developing and debuging purposes in XCTU
 * Icon file and its .psd source used for the Macintosh standalone
 
-Software versions used at the time building this prototype:
+Software versions used at the time building the prototype:
 * Mac OS X 10.8.5
 * Arduino 1.0.6
 * MaxMSP 5.1.3
