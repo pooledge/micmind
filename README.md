@@ -1,5 +1,5 @@
 # Micmind - Remotely controlled Microphone stand Prototype (Air P3)
-Arduino based microphone stand controlled remotely within a Max/MSP built standalone application. Micmind Air uses a pair of XBee Pro 868 for wireless communication operating in API mode.
+Arduino based microphone stand controlled remotely within a Max/MSP built standalone application. Micmind Air uses a pair of XBee Pro 868 operating in API mode for wireless communication.
 
 This repository includes:
 * Arduino sketch to upload on a Pro Mini 328 (5V)
