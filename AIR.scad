@@ -1,4 +1,4 @@
-$fn=500;
+$fn=100;
 
 // Global
 thickness=1.2;
@@ -7,15 +7,22 @@ thickness=1.2;
 
 // Exterior Dimensions
 height=170;
-length=108;
-width=62;
-bodyRadius=400;
+length=109;
+width=68;
+bodyRadius=200;
+
+// Interior dimensions
+switchWallLength=25;
+switchWallDistance=24;
+supportWallHeight=10;
+supportWallLength=72;
+boardWallHeight=130;
 
 // Other Variables
 switchHoleRadius=10;
 ledHoleRadius=1.5;
 xlrHoleRadius=11.8;
-xlrmHoleRadius=5.5;
+xlrmHoleRadius=6;
 sideHoleMargin=20;
 sideHoleRadius=15;
 sideHoleLength=length-2*sideHoleRadius-sideHoleMargin*2;
@@ -26,25 +33,58 @@ legoHoleRadius=2.4;
 // Body Exterior
 module sideWall(){
     translate([0,-5,0]){
-    intersection(){
-        translate([-bodyRadius,0,0]){
-            difference() {
-                cylinder(h=height, r=bodyRadius);
-                translate([0,0,thickness]){
-                    cylinder(h=height-2*thickness, r=(bodyRadius-thickness));
-                }
-                rotate(180){
-                    translate([5,0,0]){
-                        cube([2*bodyRadius-width,2*bodyRadius,height*3], center=true);
+        intersection(){
+            translate([-bodyRadius,-15,0]){
+                difference() {
+                    cylinder(h=height, r=bodyRadius, $fn=1000);
+                    translate([0,0,thickness]){
+                        cylinder(h=height-2*thickness, r=(bodyRadius-thickness));
                     }
-                }
-            }  
-        }
-        translate([0,5,0]){
-            cube([2*bodyRadius,length,2*height],center=true);
-        }
-    } 
+                    rotate(180){
+                        translate([5,0,0]){
+                            cube([2*bodyRadius-width,2*bodyRadius,height*3], center=true);
+                        }
+                    }
+                }  
+            }
+            translate([0,5,0]){
+                cube([2*bodyRadius,length,2*height],center=true);
+            }
+        } 
+    }
 }
+
+module hook(){
+    difference(){
+        cube([1.5*kRubinstein,1.5*kRubinstein,kRubinstein*2],center=true);
+        translate([-kRubinstein/4,kRubinstein/4,0]){
+            cube([kRubinstein,kRubinstein,kRubinstein*2],center=true);
+        }
+        translate([0,-kRubinstein/2,-kRubinstein*1.5]){
+            rotate([45,0,0]){
+                cube([kRubinstein*1.5,kRubinstein*2,kRubinstein*3],center=true);
+            }
+        }
+    }
+}
+
+module hooks(){
+    translate([-3*kRubinstein,-length/2-kRubinstein*0.75,height-switchWallLength]){
+        hook();
+    }
+    translate([3*kRubinstein,-length/2-kRubinstein*0.75,height-switchWallLength]){
+        mirror([1,0,0]){
+            hook();
+        }
+    }
+    translate([-3*kRubinstein,-length/2-kRubinstein*0.75,switchWallLength/2]){
+        hook();
+    }
+    translate([3*kRubinstein,-length/2-kRubinstein*0.75,switchWallLength/2]){
+        mirror([1,0,0]){
+            hook();
+        }
+    }
 }
 
 module exteriorComponents(){
@@ -59,44 +99,48 @@ module exteriorComponents(){
     
     // Front wall
     translate([0,length/2-thickness/2,height/2]){
-        cube([52.5,thickness,height],center=true);
+        cube([39,thickness,height],center=true);
     }
     
     // Back wall
-    translate([0,-length/2+thickness/2,height/2]){
-        cube([55.5,thickness,height],center=true);
+    #translate([0,-length/2+thickness/2,height/2]){
+        cube([61.5,thickness,height],center=true);
     }
 }
 
 module exterior(){
+    
+    // Back gutter cut-in
     difference(){
         exteriorComponents();
-        translate([0,-length/2+thickness/2,height/2]){
-            cube([kRubinstein*1.3,thickness,height],center=true);
+            translate([0,-length/2-kRubinstein/1.5,-kRubinstein/2]){
+            cylinder(r=kRubinstein*0.9,h=height+kRubinstein);
         }
     }
     difference(){
-        translate([0,-length/2-kRubinstein/1.5,0]){
+        translate([0,-length/2-kRubinstein/1.5,-kRubinstein]){
             difference(){
-                cylinder(r=kRubinstein,h=height);
-                cylinder(r=kRubinstein-thickness,h=height);
+                cylinder(r=kRubinstein,h=height+kRubinstein);
+                cylinder(r=kRubinstein-thickness,h=height+kRubinstein);
             }
         }
-        translate([0,-length/2-kRubinstein,height/2]){
-            cube([width,2*kRubinstein,height],center=true);
+        translate([0,-length/2-kRubinstein,height/2-kRubinstein/2]){
+            cube([width,2*kRubinstein,height+kRubinstein],center=true);
+        }
+        translate([0,0,-kRubinstein/2]){
+            cube([1.5*width,1.5*length,kRubinstein],center=true);
         }
     }
 }
 
-// Interior dimensions
-switchWallLength=25;
-switchWallDistance=24;
-supportWallHeight=10;
-supportWallLength=68;
-
 // Body Interior
 module switchWall() {
-    cube([thickness,switchWallLength,height],center=true);
+    difference(){
+        cube([thickness,switchWallLength,height],center=true);
+        translate([0,-switchWallLength/2+3,height/2-(height-boardWallHeight)/2]){
+            cube([thickness*2,6,height-boardWallHeight],center=true);
+        }
+    }
 }
 
 module switchWalls() {
@@ -123,25 +167,29 @@ module supportWalls() {
 
 module boardWall() {
     difference(){
-        translate([(width-thickness)/-2,length/2-supportWallLength,supportWallHeight]){
-            cube([width-2*thickness,thickness,height-supportWallHeight]);
+        translate([width/-2+thickness*0.75,length/2-supportWallLength,supportWallHeight]){
+            cube([width-1.5*thickness,thickness,boardWallHeight]);
         }
-        translate([1.8*kRubinstein,-5,height-(height-123-2*kRubinstein)]){
-            minkowski(){
+        /*translate([1.8*kRubinstein,-15,height-(height-123-2*kRubinstein)]){
+            cube([2*kRubinstein,thickness*10,height-120],center=true);
+            /*minkowski(){
                 cube([1,thickness*10,height-120-2*kRubinstein],center=true);
                 rotate([90]){
                     cylinder(h=thickness*10, r=kRubinstein);
                 }
             }
-        }
-        translate([-1.8*kRubinstein,-5,height-(height-123-2*kRubinstein)]){
-            minkowski(){
+        }*/
+        /*translate([-1.8*kRubinstein,-15,height-(height-123-2*kRubinstein)]){
+            cube([2*kRubinstein,thickness*10,height-120],center=true);
+            /*minkowski(){
                 cube([1,thickness*10,height-120-2*kRubinstein],center=true);
                 rotate([90]){
                     cylinder(h=thickness*10, r=kRubinstein);
                 }
             }
-        }
+        }*/
+        
+        // Board rigging holes
         translate([22,-8,15]){
             rotate([90]){
                 cylinder(h=thickness*10, r=2.4);
@@ -163,16 +211,50 @@ module boardWall() {
             }
         }
     }
+    
+    // Battery placeholders and strength'tens
+    translate([-switchWallDistance/2-thickness/2,length/2-supportWallLength+thickness/2+1,supportWallHeight+45]){
+        cube([thickness,thickness+2,90],center=true);
+    }
+    translate([switchWallDistance/2+thickness/2,length/2-supportWallLength+thickness/2+1,supportWallHeight+45]){
+        cube([thickness,thickness+2,90],center=true);
+    }
+    
+    // Temporary touch
+    /*#translate([0,length/2-supportWallLength+thickness/2+1+40,height/2+supportWallHeight/2]){
+        cube([55,thickness+2,height-supportWallHeight],center=true);
+    }
+    #translate([0,length/2-supportWallLength+thickness/2+1-25,height/2+supportWallHeight/2]){
+        cube([63,thickness+2,height-supportWallHeight],center=true);
+    }*/
+      
+}
+
+module frontLoopCover() {   
+    difference(){
+        translate([0,length/2-switchWallLength/2,supportWallHeight]){
+            cube([switchWallDistance,switchWallLength-12,supportWallHeight*2],center=true);
+        }
+        translate([-width/2,length/2-switchWallLength/2,supportWallHeight+thickness]){
+            rotate([0,90]){
+                cylinder(h=width, r=legoHoleRadius);
+            }
+        }
+    } 
+    translate([0,length/2-switchWallLength/2,thickness*2]){
+        cube([switchWallDistance+2*thickness,switchWallLength-12,thickness*2],center=true);
+    }
 }
 
 module backLoopBodyComponent() {
     translate([-2*kRubinstein,0,0]){
         cube([kRubinstein/2,switchWallLength/2,supportWallHeight*3],center=true);
     }
-    translate([width/2-2*kRubinstein,0,0]){
+    translate([2*kRubinstein,0,0]){
         cube([kRubinstein/2,switchWallLength/2,supportWallHeight*3],center=true);
     }
 }
+
 module backLoopBody() {
     translate([0,-length/2+switchWallLength/4,height-1.5*supportWallHeight]){
         difference(){
@@ -182,7 +264,7 @@ module backLoopBody() {
                     cube([width,switchWallLength,supportWallHeight*4],center=true);
                 }
             }
-            translate([-width/2,0,1.5*supportWallHeight-5*thickness]){
+            #translate([-width/2,0,kRubinstein]){
                 rotate([0,90]){
                     cylinder(h=width, r=legoHoleRadius);
                 }
@@ -191,55 +273,31 @@ module backLoopBody() {
     }
 }
 
-
-module frontLoopCover() {   
-    difference(){
-        translate([0,length/2-switchWallLength/2,supportWallHeight]){
-            cube([switchWallDistance,switchWallLength/2,supportWallHeight*2],center=true);
-        }
-        translate([-width/2,length/2-switchWallLength/2,supportWallHeight]){
-            rotate([0,90]){
-                cylinder(h=width, r=legoHoleRadius);
+module backLoopCoverComponent() {    
+    translate([2.5*kRubinstein,0,0]){
+        cube([kRubinstein/2,switchWallLength/2,switchWallLength/2+2*thickness],center=true);
+    }
+    translate([-2.5*kRubinstein,0,0]){
+        cube([kRubinstein/2,switchWallLength/2,switchWallLength/2+2*thickness],center=true);
+    }
+}
+module backLoopCover() {
+    translate([0,-length/2+switchWallLength/4,switchWallLength/4+2*thickness]){
+        difference(){
+            backLoopCoverComponent();
+            #translate([-width/2,0,thickness]){
+                rotate([0,90]){
+                    cylinder(h=width, r=legoHoleRadius);
+                }
             }
         }
-    } 
-    translate([0,length/2-switchWallLength/2,thickness]){
-        cube([switchWallDistance+2*thickness,switchWallLength/2,thickness],center=true);
     }
 }
-
-module backLoopCover() {
-}
-/*module helper() {
-    #translate([0,length/2-supportWallLength/2,0]){
-        cube([thickness,supportWallLength,thickness],center=true);
-    }
-}
-
-module helpers() {  
-    #translate([-12,0,110]){
-        helper();
-    }
-    #translate([12,0,110]){
-        helper();
-    }
-    #translate([-12,0,76]){
-        helper();
-    }
-    #translate([12,0,76]){
-        helper();
-    } 
-    #translate([-12,0,43]){
-        helper();
-    }
-    #translate([12,0,43]){
-        helper();
-    }   
-}*/
 
 /*********************************** Output ***********************************/
 
 module body() {
+    hooks();
     difference(){
         exterior();
         
@@ -263,23 +321,13 @@ module body() {
                 rotate([0,0,90]){
                     cylinder(h=thickness*10, r=xlrmHoleRadius);
                 }
-                translate([5,-xlrmHoleRadius*1.5,0]){
-                    cube([xlrmHoleRadius,3*xlrmHoleRadius,10]);
-                }
-                translate([-5-xlrmHoleRadius,-xlrmHoleRadius*1.5,0]){
+                translate([-5.5-xlrmHoleRadius,-xlrmHoleRadius*1.5,0]){
                     cube([xlrmHoleRadius,3*xlrmHoleRadius,10]);
                 }
             }
         }
         
         /* LEGACY */
-        /*// Topview hole cut
-        translate([0,10,-5*thickness+height]){
-            rotate([0,0,90]){
-                cylinder(h=thickness*10, r=(width-sideHoleMargin)/2);
-            }
-        }*/
-        
         /* // Side walls cut     
         translate([-bodyRadius/4,-sideHoleLength/2-sideHoleMargin*0.25,sideHoleRadius+sideHoleMargin]){
             minkowski(){  
@@ -298,10 +346,10 @@ module body() {
         }
         // Back loop exterior cuts
         translate([0,-length/2,height-switchWallLength/4]){
-            translate([width/2-1.5*kRubinstein,0,0]){
+            translate([2.5*kRubinstein,0,0]){
                 cube([kRubinstein/2,switchWallLength/2,switchWallLength/2],center=true);
             }
-            translate([1.5*kRubinstein-width/2,0,0]){
+            translate([-2.5*kRubinstein,0,0]){
                 cube([kRubinstein/2,switchWallLength/2,switchWallLength/2],center=true);
             }
         }
@@ -318,17 +366,16 @@ module body() {
     }
     supportWalls();
     boardWall();
-    frontLoopCover();
     backLoopBody();
-    //helpers();
 }
 
 module cover(){
+    
     translate([0,0,0]){
         difference(){
             exterior();
-            translate([0,0,height/2+1]){
-                cube([width,length,height],center=true);
+            translate([0,0,height/2+thickness]){
+                cube([width,length*1.5,height],center=true);
             }
             // XLR hole + rigging holes cut
             translate([0,-length/2+xlrHoleRadius+kRubinstein,-5*thickness]){
@@ -346,11 +393,16 @@ module cover(){
                     cylinder(h=thickness*10, r=1.5);
                 }
             }
+            
+            // Topview hole cut
+            /*translate([0,length/2-13-30,-5*thickness]){
+                rotate([0,0,90]){
+                    cylinder(h=thickness*10, r=13);
+                }
+            }*/
         }
     }
-    difference(){
-        frontLoopCover();
-    }
+    frontLoopCover();
     backLoopCover();
 }
 
