@@ -395,11 +395,11 @@ module cover(){
             }
             
             // Topview hole cut
-            /*translate([0,length/2-13-30,-5*thickness]){
+            translate([0,length/2-13-30,-5*thickness]){
                 rotate([0,0,90]){
-                    cylinder(h=thickness*10, r=13);
+                    cylinder(h=thickness*10, r=15);
                 }
-            }*/
+            }
         }
     }
     frontLoopCover();
