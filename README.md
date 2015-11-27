@@ -7,7 +7,7 @@ This repository includes:
 * EAGLE files containing schematic and board layouts
 * OpenSCAD file enclosure model to build and export in STL format for futher 3D printing
 * Xbee firmware XML files used by XCTU
-* XML file with commands for developing and debuging purposes in XCTU
+* XML file containing some commands for developing and debuging purposes in XCTU
 * Icon file and its .psd source used for the Macintosh standalone
 
 Software versions used at the time building the prototype:
