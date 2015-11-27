@@ -1,6 +1,5 @@
-$fn=100;
-
 // Global
+$fn=100;
 thickness=1.2;
 
 /*********************************** Setup ***********************************/
@@ -344,6 +343,7 @@ module body() {
                 cylinder(h=width, r=5);
             }
         }
+        
         // Back loop exterior cuts
         translate([0,-length/2,height-switchWallLength/4]){
             translate([2.5*kRubinstein,0,0]){
@@ -377,6 +377,7 @@ module cover(){
             translate([0,0,height/2+thickness]){
                 cube([width,length*1.5,height],center=true);
             }
+            
             // XLR hole + rigging holes cut
             translate([0,-length/2+xlrHoleRadius+kRubinstein,-5*thickness]){
                 rotate([0,0,90]){
