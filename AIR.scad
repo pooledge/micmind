@@ -27,7 +27,7 @@ sideHoleRadius=15;
 sideHoleLength=length-2*sideHoleRadius-sideHoleMargin*2;
 sideHoleHeight=height-2*sideHoleMargin-2*sideHoleRadius;
 kRubinstein=8; // =)
-legoHoleRadius=2.75;
+legoHoleRadius=2.65;
 
 // Body Exterior
 module sideWall(topBottomThickness){
@@ -409,12 +409,12 @@ module cover(){
     }
 }
 
-difference(){
+/*difference(){
     body();
     
     // Cover placeholder
     translate([0,0,height]){
         cube([1.5*width,1.5*length,thickness*2],center=true);
     }
-}
-//cover();
+}*/
+cover();
