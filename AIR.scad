@@ -21,13 +21,13 @@ boardWallHeight=130;
 switchHoleRadius=10;
 ledHoleRadius=1.5;
 xlrHoleRadius=11.8;
-xlrmHoleRadius=6;
+xlrmHoleRadius=5.7;
 sideHoleMargin=20;
 sideHoleRadius=15;
 sideHoleLength=length-2*sideHoleRadius-sideHoleMargin*2;
 sideHoleHeight=height-2*sideHoleMargin-2*sideHoleRadius;
 kRubinstein=8; // =)
-legoHoleRadius=2.8;
+legoHoleRadius=2.75;
 
 // Body Exterior
 module sideWall(topBottomThickness){
@@ -320,7 +320,7 @@ module body() {
                 rotate([0,0,90]){
                     cylinder(h=thickness*10, r=xlrmHoleRadius);
                 }
-                translate([-5.5-xlrmHoleRadius,-xlrmHoleRadius*1.5,0]){
+                #translate([-4.5-xlrmHoleRadius,-xlrmHoleRadius*1.5,0]){
                     cube([xlrmHoleRadius,3*xlrmHoleRadius,10]);
                 }
             }
@@ -396,7 +396,7 @@ module cover(){
             }
             
             // Topview hole cut
-            translate([0,length/2-13-30,-5*thickness]){
+            translate([0,length/2-53,-5*thickness]){
                 rotate([0,0,90]){
                     cylinder(h=thickness*10, r=15);
                 }
@@ -409,12 +409,12 @@ module cover(){
     }
 }
 
-/*difference(){
+difference(){
     body();
     
     // Cover placeholder
     translate([0,0,height]){
         cube([1.5*width,1.5*length,thickness*2],center=true);
     }
-}*/
-cover();
+}
+//cover();
