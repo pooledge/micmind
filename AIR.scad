@@ -15,7 +15,7 @@ switchWallLength=25;
 switchWallDistance=24;
 supportWallHeight=10;
 supportWallLength=72;
-boardWallHeight=130;
+boardWallHeight=110;
 
 // Other Variables
 switchHoleRadius=10;
@@ -113,14 +113,14 @@ module exterior(topBottomThickness=1){
     difference(){
         exteriorComponents(topBottomThickness);
             translate([0,-length/2-kRubinstein/1.5,-kRubinstein/2]){
-            cylinder(r=kRubinstein*0.9,h=height+kRubinstein);
+            cylinder(r=kRubinstein*1.1,h=height+kRubinstein);
         }
     }
     difference(){
         translate([0,-length/2-kRubinstein/1.5,-kRubinstein]){
             difference(){
-                cylinder(r=kRubinstein,h=height+kRubinstein);
-                cylinder(r=kRubinstein-thickness,h=height+kRubinstein);
+                cylinder(r=kRubinstein*1.2,h=height+kRubinstein);
+                cylinder(r=kRubinstein*1.2-thickness,h=height+kRubinstein);
             }
         }
         translate([0,-length/2-kRubinstein,height/2-kRubinstein/2]){
@@ -189,34 +189,27 @@ module boardWall() {
         }*/
         
         // Board rigging holes
-        translate([22,-8,15]){
+        translate([18,-8,98]){
             rotate([90]){
-                cylinder(h=thickness*10, r=2.4);
+                cylinder(h=thickness*10, r=legoHoleRadius);
             }
         }
-        translate([22,-8,15+2*kRubinstein]){
+        translate([18,-8,98+2*kRubinstein]){
             rotate([90]){
-                cylinder(h=thickness*10, r=2.4);
-            }
-        }
-        translate([22,-8,82]){
-            rotate([90]){
-                cylinder(h=thickness*10, r=2.4);
-            }
-        }
-        translate([22,-8,82+2*kRubinstein]){
-            rotate([90]){
-                cylinder(h=thickness*10, r=2.4);
+                cylinder(h=thickness*10, r=legoHoleRadius);
             }
         }
     }
     
     // Battery placeholders and strength'tens
-    translate([-switchWallDistance/2-thickness/2,length/2-supportWallLength+thickness/2+1,supportWallHeight+45]){
-        cube([thickness,thickness+2,90],center=true);
+    translate([-switchWallDistance/2-thickness/2,length/2-supportWallLength+thickness/2+1,boardWallHeight/2+supportWallHeight]){
+        cube([thickness,thickness+2,boardWallHeight],center=true);
     }
-    translate([switchWallDistance/2+thickness/2,length/2-supportWallLength+thickness/2+1,supportWallHeight+45]){
-        cube([thickness,thickness+2,90],center=true);
+    translate([switchWallDistance/2+thickness/2,length/2-supportWallLength+thickness/2+1,boardWallHeight/2+supportWallHeight]){
+        cube([thickness,thickness+2,boardWallHeight],center=true);
+    }
+    #translate([-27,length/2-supportWallLength+thickness/2-2,boardWallHeight/2+supportWallHeight]){
+        cube([2,thickness+4,boardWallHeight],center=true);
     }
     
     // Temporary touch
@@ -320,10 +313,44 @@ module body() {
                 rotate([0,0,90]){
                     cylinder(h=thickness*10, r=xlrmHoleRadius);
                 }
-                #translate([-4.5-xlrmHoleRadius,-xlrmHoleRadius*1.5,0]){
+                #translate([-4.6-xlrmHoleRadius,-xlrmHoleRadius*1.5,0]){
                     cube([xlrmHoleRadius,3*xlrmHoleRadius,10]);
                 }
             }
+        }
+        
+        // Front loop exterior cuts
+        translate([-width/2,length/2-switchWallLength/2,height-supportWallHeight]){
+            rotate([0,90]){
+                cylinder(h=width, r=5);
+            }
+        }
+        
+        // Back loop exterior cuts
+        #translate([0,-length/2,height-switchWallLength/4]){
+            translate([2.5*kRubinstein+0.25,0,0]){
+                cube([kRubinstein/2+0.5,switchWallLength/2,switchWallLength/2],center=true);
+            }
+            translate([-2.5*kRubinstein-0.25,0,0]){
+                cube([kRubinstein/2+0.5,switchWallLength/2,switchWallLength/2],center=true);
+            }
+        }
+        
+        // Antenna hole cut
+        translate([-width,length/2-supportWallLength-24,35]){
+            rotate([90,0,90]){
+                cylinder(h=width, r=5);
+            }
+        }
+        
+        // Backside board cut
+        translate([0,-length/2+thickness/2,(height-switchWallLength/2)/2]){
+            minkowski(){
+                cube([width-50,thickness*10,height-100],center=true);
+                rotate([90]){
+                    cylinder(h=thickness*10, r=kRubinstein);
+                }
+            }    
         }
         
         /* LEGACY */
@@ -336,23 +363,6 @@ module body() {
                 }
             }
         }*/
-        
-        // Front loop exterior cuts
-        translate([-width/2,length/2-switchWallLength/2,height-supportWallHeight]){
-            rotate([0,90]){
-                cylinder(h=width, r=5);
-            }
-        }
-        
-        // Back loop exterior cuts
-        translate([0,-length/2,height-switchWallLength/4]){
-            translate([2.5*kRubinstein,0,0]){
-                cube([kRubinstein/2,switchWallLength/2,switchWallLength/2],center=true);
-            }
-            translate([-2.5*kRubinstein,0,0]){
-                cube([kRubinstein/2,switchWallLength/2,switchWallLength/2],center=true);
-            }
-        }
     }
     
     // Front loop interior cuts
@@ -409,12 +419,12 @@ module cover(){
     }
 }
 
-/*difference(){
+difference(){
     body();
     
     // Cover placeholder
     translate([0,0,height]){
         cube([1.5*width,1.5*length,thickness*2],center=true);
     }
-}*/
-cover();
+}
+//cover();
