@@ -39,7 +39,6 @@ char MSB = 's';
 byte LSB = 0;
 
 int powerValue = 0;
-int powerValueTwoThirds = 0;
 
 long lastCommandTime = 0;
 //long lastCommandThresholdForStall = 750;
@@ -98,7 +97,6 @@ void loop() {
     LSB = currentCommand[1];
      
     powerValue = int(LSB);
-    powerValueTwoThirds = int(LSB) * 3 / 4;
       
     switch (MSB) {
       case 'c': // Rotate CW
