@@ -1,8 +1,10 @@
 /*  
-*  Micmind Main Unit RC
+*  Micmind Air P3 Client Unit RC
+*  Version 1.1
+*  
 *  Implementation of Basic Interaction w/MaxMSP or Bridge Unit
 *
-*  Based on a sketches and patch by Thomas Ouellet Fredericks and Daniel Jolliffe  
+*  Based on a sketches and patch by Thomas Ouellet Fredericks and Daniel Jolliffe
 */
 
 #define HIGH 0x1  // Define HIGH as boolean true
