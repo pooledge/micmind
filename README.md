@@ -40,7 +40,7 @@ Micmind is not pretending to be unique, as of 2016 there are different similar p
 ## Safety
 * Permanent motor braking while stall
 * Panic mode if connection to host computer is lost or not available
-* Clear visual status indication both host-/ and client-side
+* Clear visual status indication both host- and client-side
 
 ## Power management
 * Single 6c lithium-polymer battery for hours of operation, 5Ah, built-in
