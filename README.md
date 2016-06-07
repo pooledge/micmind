@@ -61,4 +61,4 @@ Micmind is not pretending to be unique, as of 2016, there are different similar 
 
 ## Disclaimer
 This project is being realized as a part of the master degree diploma at the sound engineering faculty of University of music and performing arts in Vienna, Austria.
-This disclaimer is being updated constantly due to required regulations.
+This disclaimer is being updated constantly along required regulations.
