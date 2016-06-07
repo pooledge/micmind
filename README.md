@@ -23,9 +23,9 @@ Software versions used at the time building the prototype:
 
 Micmind is simply a microphone stand for seamless indoor stereo recording, controlled remotely. So called AB-stereo technique, commonly used in classical music recording utilizes a pair of omnidirectional microphones. While collecting both time-of-arrival and level difference information and being very efficient, this method demands considerations and decisions often being made on-the-fly, also involving some sort of luck. While familiar with theory, sound engineer may still play quite a long time with a stand position and the distance between two microphones as those factors have dramatic impact on the sound image. Very often classical recordings are made with AB only and within low-time conditions, especially those low paid sound engineer jobs if you know what I mean. Now, to tell a long story short, being able to adjust AB parameters from some distance brings following advantages:
 * The need to cover multiple meters between control and recording rooms is eliminated (meh)
-* Key adjustments being made and can be observed on-the-fly, thus not only the result is achieved in a more efficient way but also the learn effect of using this recording technique increases dramatically
+* Key adjustments applied on-the-fly with their effect to be observed instantly, thus not only the result is achieved in a more efficient way but also the learn effect of using this recording technique increases dramatically.
 
-Micmind is not pretending to be unique, as of 2016, there are different similar products available: Remote-Mast, Robo-Mic, Stereoblade, Optogate etc. However each of them has their disadvantage: summed up they are either too bulky, expensive, loud or not suitable for AB recording due to its size or construction principles.
+Micmind is not pretending to be unique, as of 2016 there are different similar products currently available: Remote-Mast, Robo-Mic, Stereoblade, Optogate... etc. However each of them has their disadvantage: summed up they are either too bulky, expensive, loud or not suitable for AB recording due to its size or construction principles.
 
 ## Key features
 * Up to 1.2km line-of-sight controlling distance
