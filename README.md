@@ -25,7 +25,7 @@ Micmind is simply a microphone stand for seamless indoor stereo recording, contr
 * The need to cover multiple meters between control and recording rooms is eliminated (meh)
 * Key adjustments applied on-the-fly with their effect to be observed instantly, thus not only the result is achieved in a more efficient way but also the learn effect of using this recording technique increases dramatically.
 
-Micmind is not pretending to be unique, as of 2016 there are different similar products currently available: Remote-Mast, Robo-Mic, Stereoblade, Optogate... etc. However each of them has their disadvantage: summed up they are either too bulky, expensive, loud or not suitable for AB recording due to its size or construction principles.
+Micmind is not pretending to be unique, as of 2016 there are different similar products currently available: Remote-Mast, Robo-Mic, Stereoblade, Optogate... etc. However each of them has their disadvantages: summed up they are either too bulky, expensive, loud or not suitable for AB recording due to its size or construction principles.
 
 ## Key features
 * Up to 1.2km line-of-sight controlling distance
