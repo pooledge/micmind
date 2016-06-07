@@ -1,4 +1,4 @@
-# Micmind - Remotely controlled Microphone stand Prototype (Air P3)
+# Micmind - remotely controlled microphone stand prototype (Air P3)
 Arduino based microphone stand controlled remotely within a Max/MSP built standalone application. Micmind Air uses a pair of XBee Pro 868 operating in API mode for wireless communication.
 
 This repository includes:
@@ -43,7 +43,7 @@ Micmind is not pretending to be unique, as of 2016, there are different similar 
 * Clear visual status indication both host-/ and client-side
 
 ## Power management
-* Single 6c lithium polymer battery for hours of operation, 5Ah, built-in
+* Single 6c lithium-polymer battery for hours of operation, 5Ah, built-in
 * Seamless charging with no disassembly
 * Operation/Charging mode selector switch
 
@@ -60,5 +60,5 @@ Micmind is not pretending to be unique, as of 2016, there are different similar 
 * ~~PCB, a printed circuit board. This text's author spent two weeks soldering a circuit board for the prototype. Involving more components in the future simply won't leave any choice on this one. For the efficiency of work!~~
 
 ## Disclaimer
-This project is being realized as a part of the master degree diploma work at the sound engineering faculty at Univercity of music and performing arts in Vienna, Austria.
+This project is being realized as a part of the master degree diploma at the sound engineering faculty of University of music and performing arts in Vienna, Austria.
 This disclaimer is being updated constantly due to required regulations.
