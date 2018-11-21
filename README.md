@@ -58,6 +58,7 @@ Micmind is not pretending to be unique, as of 2016 there are different similar p
 * Since a homo drive proved to be the right choice for a moveable mic stand, even slightly bigger wheels will instantly allow more stability and better weight distribution - for preciser handling when overcoming boundaries such as cables, height differences of various surfaces and their defects.
 * Quieter motors is just a matter of costs, since all their characteristics are already known and have been proved as appropriate. Using gearless motors instead of geared ones might be a good decision, the more so, because the programmable hardware layer of Micmind easily allows their embedding. In that way it is definitely possible to achieve a smoother operation with significant lower noise emission - an important factor for recording classical music known for its wide dynamic range and low SNR.
 * ~~PCB, a printed circuit board. This text's author spent two weeks soldering a circuit board for the prototype. Involving more components in the future simply won't leave any choice on this one. For the efficiency of work!~~
+* Undo/redo functionality for fast A/B testing
 
 ## Disclaimer
 This project is being realized as a part of the master degree diploma at the sound engineering faculty of University of music and performing arts in Vienna, Austria.
