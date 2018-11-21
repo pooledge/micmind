@@ -45,11 +45,11 @@ Micmind is not pretending to be unique, as of 2016 there are different similar p
 ## Power management
 * Single 6c lithium-polymer battery for hours of operation, 5Ah, built-in
 * Seamless charging with no disassembly
-* Operation/Charging mode selector switch
+* Operation/charging mode selector switch
 
 ## Chassis
 * Main stand built upon freely available Manfrotto 1005BAC tripod and 100mm mecanum wheels
-* Simple and efficient DC motors
+* Simple and efficient 24VDC motors
 
 ## Future demands
 * ~~Future of Micmind is the future of wireless microphoning. Though our wired initial prototype already serves at it's best, imagine a microphone stand, that can move freely, with no cables, with no boundaries.~~
